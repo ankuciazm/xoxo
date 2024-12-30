@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customized Quote Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    .quote-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      margin: 50px auto;
+    }
+    .quote {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      color: #fff;
+      background: #ff6b6b;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #ff4a4a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey, Sargunnnnn_! </h1>
+  <div class="quote-box">
+    <p class="quote">Click below for a new quote!</p>
+    <button class="btn" onclick="generateQuote()">Get a Quote</button>
+  </div>
+
+  <script>
+    const quotes = [
+      "You're capable of amazing things, Sargunnnnn_... after you finish scrolling through TikTok, of course.",
+      "Keep shining, Sargunnnnn_. The world needs your light... and your memes.",
+      "Believe in yourself, Sargunnnnn_ — but also, don’t forget to take a nap first.",
+      "Sargunnnnn_, today is your day to conquer anything... but only after coffee.",
+      "The best is yet to come, Sargunnnnn_ — assuming you can find your charger first.",
+      
+      "You’ve got this, Sargunnnnn_, even if you can’t remember where you put your phone.",
+      "Sargunnnnn_, remember: everything happens for a reason... except for your Wi-Fi going out.",
+      "You're going places, Sargunnnnn_ — probably to your bed, but still, you're going places.",
+      "Sargunnnnn_, you’re going to crush it today... after you hit snooze one more time.",
+      "You’ve reached the level of adulthood where caffeine is your best friend, Sargunnnnn_.",
+      "Sargunnnnn_, don’t forget, you’re an entire vibe... just make sure your phone has charge first.",
+      "Good things come to those who wait, Sargunnnnn_... but it’s probably better to be with me while waiting.",
+      "Don’t worry, Sargunnnnn_, you’re amazing even if you can’t remember why you walked into the room.",
+      "Sargunnnnn_, remember: life is short, so enjoy the memes while you can.",
+      "You got this, Sargunnnnn_ — but first, make sure your Wi-Fi is actually working.",
+     
+      
+    
+      "A little bit of magic and a lot of coffee — that’s the secret, Sargunnnnn_.",
+      "Sargunnnnn_, you’re a queen, but even queens need to reply to texts sometimes.",
+      "Your aura is so strong, Sargunnnnn_... almost as strong as your snooze button skills.",
+      "Sargunnnnn_, you deserve the world, but first, make sure you’ve finished binge-watching that show.",
+      "Some days, Sargunnnnn_, the only motivation you need is to take a nap.",
+      "Sargunnnnn_, if procrastination were an Olympic sport, you’d be gold medalist.",
+      "Sargunnnnn_, you’re unstoppable... except when it’s time to get out of bed.",
+      "Sargunnnnn_, you’re amazing, even if you can’t remember what you were supposed to be doing.",
+      "Life is tough, but so are you, Sargunnnnn_ — once you finish your snack break.",
+      "Sargunnnnn_, if only your charger could give you as much energy as your favorite playlist.",
+      "Sargunnnnn_, the universe is behind you — but so is the couch, so maybe just chill there for a bit.",
+      "You're the whole package, Sargunnnnn_... just make sure the package isn’t your phone charging.",
+      "Keep being awesome, Sargunnnnn_, even if you only get out of bed for food.",
+      "Don’t worry, Sargunnnnn_, your next great adventure is only one nap away.",
+      "Sargunnnnn_, you can achieve anything... as long as it’s not too early in the morning.",
+      "You’re going places, Sargunnnnn_ — mostly to the kitchen, but still, you’re going places.",
+      "Sargunnnnn_, you are an inspiration... to all those who hit snooze one more time.",
+      "Don’t let anyone dim your shine, Sargunnnnn_... except maybe when the Wi-Fi is down.",
+      "Sargunnnnn_, every day is a new opportunity to nap and ignore responsibilities.",
+      "Stay fabulous, Sargunnnnn_... but maybe remember to text me back, just a thought.",
+      "Sargunnnnn_, even on your worst days, you’re still better than the person who didn’t reply to me.",
+      "Sargunnnnn_, just remember: you can always be better, just don’t be too good at ignoring messages.",
+      "Sargunnnnn_, when in doubt, remember: texting me back is a power move.",
+      "You're a queen, Sargunnnnn_, but don’t forget to reply to me — I might need your royal wisdom.",
+      "You’re like Wi-Fi, Sargunnnnn_ — everyone loves you, but it would be great if you could just reply sometimes.",
+      "Sargunnnnn_, don’t forget to message me... will remind u after every 5 quotes.",
+      "Your day’s complete when you message me, Sargunnnnn_ — or at least pretend to care."
+    ];
+
+    let counter = 0;
+
+    function generateQuote() {
+      let randomIndex = Math.floor(Math.random() * quotes.length);
+      
+      if (counter === 5) {
+        document.querySelector('.quote').textContent = "Sargunnnnn_, don’t forget to message me... will remind u after every 5 quotes.";
+        counter = 0;  // Reset counter after reminder quote
+      } else {
+        document.querySelector('.quote').textContent = quotes[randomIndex];
+        counter++;
+      }
+    }
+  </script>
+</body>
+</html>
